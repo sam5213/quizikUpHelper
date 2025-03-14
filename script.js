@@ -25,14 +25,14 @@ document.getElementById('wakeButton').addEventListener('click', function() {
     }, 1200); // Обновляем каждые 1200 миллисекунд
 
     setTimeout(function() {
-        sleepImage.src = 'wakeup.png'; // URL для изображения проснувшегося Дежурный
+        sleepImage.src = 'waiting.png'; // URL для изображения проснувшегося Дежурный
         sleepImage.alt = 'Просыпающийся Дежурный';
         message.textContent = 'Дежурный просыпается! Еще совсем чуть-чуть';
     }, 4000); // 4000 миллисекунд = 4 секунд
 
     // Через 30 секунд поменять изображение и сообщение
     setTimeout(function() {
-        sleepImage.src = 'work.png'; // URL для изображения проснувшегося Дежурный
+        sleepImage.src = 'waiting.png'; // URL для изображения проснувшегося Дежурный
         sleepImage.alt = 'Проснувшийся Дежурный';
         message.textContent = 'Дежурный проснулся!';
     }, 9000); // 9000 миллисекунд = 9 секунд
@@ -44,7 +44,7 @@ document.getElementById('wakeButton').addEventListener('click', function() {
 
 function sendGetRequest() {
     var xhr = new XMLHttpRequest(); // Создаем новый объект XMLHttpRequest
-    var url = "https://creativemath.glitch.me/"; // URL, на который будет отправлен запрос
+    var url = "https://famous-jungle-mandarin.glitch.me/"; // URL, на который будет отправлен запрос
 
     xhr.open("GET", url, true); // Инициализируем GET-запрос
 
