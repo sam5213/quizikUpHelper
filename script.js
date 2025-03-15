@@ -9,7 +9,7 @@ document.getElementById('wakeButton').addEventListener('click', function() {
     wakeButton.classList.add('disabled');
 
     // Показать сообщение о том, что Дежурный услышал
-    message.textContent = 'Дежурный услышал и скоро проснется...';
+    message.textContent = 'Бот услышал и скоро проснется...';
     sendGetRequest();
 
     // Обновление прогресс-бара
@@ -27,14 +27,14 @@ document.getElementById('wakeButton').addEventListener('click', function() {
     setTimeout(function() {
         sleepImage.src = 'waiting.png'; // URL для изображения проснувшегося Дежурный
         sleepImage.alt = 'Просыпающийся Дежурный';
-        message.textContent = 'Дежурный просыпается! Еще совсем чуть-чуть';
+        message.textContent = 'Бот просыпается! Еще совсем чуть-чуть';
     }, 4000); // 4000 миллисекунд = 4 секунд
 
     // Через 30 секунд поменять изображение и сообщение
     setTimeout(function() {
         sleepImage.src = 'waiting.png'; // URL для изображения проснувшегося Дежурный
         sleepImage.alt = 'Проснувшийся Дежурный';
-        message.textContent = 'Дежурный проснулся!';
+        message.textContent = 'Бот проснулся!';
     }, 9000); // 9000 миллисекунд = 9 секунд
 
     setTimeout(function() {
