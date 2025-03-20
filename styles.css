@@ -25,8 +25,8 @@ body {
 .sleep-image {
     width: 100%;
     border-radius: 10px;
-    mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
-    /* mask-image: linear-gradient(to right, transparent, black 60%, black 80%, transparent), 
+     /* mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 60%, black 80%, transparent), 
                   linear-gradient(to bottom, transparent, black 60%, black 80%, transparent); */
     transition: transform 0.3s ease;
 }
@@ -36,7 +36,7 @@ body {
     padding: 10px 20px;
     font-size: 18px;
     color: #fff;
-    background-color: #81c8e1;
+    background-color: #658f6c;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -44,18 +44,18 @@ body {
 }
 
 .wake-button:hover {
-    background-color: #2c81af;
+    background-color: #3e5943;
 }
 
 .wake-button:disabled {
-    background-color: #a2d5ea; /* Бледный цвет для неактивной кнопки */
+    background-color: #658f6c; /* Бледный цвет для неактивной кнопки */
     cursor: not-allowed; /* Изменение курсора на "нельзя" */
 }
 
 .message {
     margin-top: 20px;
     font-size: 18px;
-    color: #2c81af;
+    color: #3e5943;
 }
 
 #progressContainer {
@@ -69,6 +69,6 @@ body {
 #progressBar {
     width: 0%;
     height: 20px;
-    background-color: #558fc9;
+    background-color: #3e5943;
     transition: width 0.5s; /* Плавный переход */
 }
