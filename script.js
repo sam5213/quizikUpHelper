@@ -1,5 +1,5 @@
 document.getElementById('wakeButton').addEventListener('click', function() {
-    const sleepImage = document.getElementById('sleepImage');
+    const sleepVideo = document.getElementById('sleepImage');
     const message = document.getElementById('message');
     const wakeButton = document.getElementById('wakeButton');
     const progressBar = document.getElementById('progressBar');
@@ -7,6 +7,13 @@ document.getElementById('wakeButton').addEventListener('click', function() {
     // Деактивировать кнопку и изменить её стиль
     wakeButton.disabled = true;
     wakeButton.classList.add('disabled');
+
+    // Для изменения источника видео
+    function changeVideoSource(newSource) {
+        sleepVideo.innerHTML = `<source src="${newSource}" type="video/mp4">`;
+        sleepVideo.load();
+        sleepVideo.play();
+    }
 
     // Показать сообщение о том, что Дежурный услышал
     message.textContent = 'Бот услышал и скоро проснется...';
@@ -25,15 +32,17 @@ document.getElementById('wakeButton').addEventListener('click', function() {
     }, 1200); // Обновляем каждые 1200 миллисекунд
 
     setTimeout(function() {
-        sleepImage.src = 'waiting.png'; // URL для изображения проснувшегося Дежурный
-        sleepImage.alt = 'Просыпающийся Дежурный';
+        // sleepImage.src = 'waiting.mp4'; // URL для изображения проснувшегося Дежурный
+        // sleepImage.alt = 'Просыпающийся Дежурный';
+        changeVideoSource('waiting.mp4');
         message.textContent = 'Бот просыпается! Еще совсем чуть-чуть';
     }, 4000); // 4000 миллисекунд = 4 секунд
 
     // Через 30 секунд поменять изображение и сообщение
     setTimeout(function() {
-        sleepImage.src = 'waiting.png'; // URL для изображения проснувшегося Дежурный
-        sleepImage.alt = 'Проснувшийся Дежурный';
+        // sleepImage.src = 'waiting.mp4'; // URL для изображения проснувшегося Дежурный
+        // sleepImage.alt = 'Проснувшийся Дежурный';
+        changeVideoSource('waiting.mp4');
         message.textContent = 'Бот проснулся!';
     }, 9000); // 9000 миллисекунд = 9 секунд
 
