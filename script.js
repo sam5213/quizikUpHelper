@@ -42,7 +42,7 @@ document.getElementById('wakeButton').addEventListener('click', function() {
     setTimeout(function() {
         // sleepImage.src = 'waiting.mp4'; // URL для изображения проснувшегося Дежурный
         // sleepImage.alt = 'Проснувшийся Дежурный';
-        changeVideoSource('waiting.mp4');
+        // changeVideoSource('waiting.mp4');
         message.textContent = 'Бот проснулся!';
     }, 9000); // 9000 миллисекунд = 9 секунд
 
