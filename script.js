@@ -25,7 +25,7 @@ document.getElementById('wakeButton').addEventListener('click', function() {
     }, 1200); // Обновляем каждые 1200 миллисекунд
 
     setTimeout(function() {
-        sleepImage.src = 'waiting.mp4'; // URL для изображения проснувшегося Дежурный
+        sleepImage.src = 'waiting.png'; // URL для изображения проснувшегося Дежурный
         sleepImage.alt = 'Просыпающийся Дежурный';
         message.textContent = 'Бот просыпается! Еще совсем чуть-чуть';
     }, 4000); // 4000 миллисекунд = 4 секунд
